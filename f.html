@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f"> 
+        <label for="name">name</label>
+        <input type="text" id="name" name="name" required>
+        <input type="button" value="click-here" onclick="fun()">
+    </form>
+    <form name="f2"> 
+        <input type="number" name="n" required>
+        <input type="button" value="click-here" onclick="fun2()">
+    </form>
+    <script>
+        
+        function fun()
+        {
+            var n1=document.f.name.value.toUpperCase();
+            document.f.name.value=n1;
+        }
+        function fun2()
+        {
+            var n1=document.f2.n.value;
+            var ans=1;
+            while(n1>1)
+            {
+                ans*=n1;
+                n1--;
+            }
+            document.f2.n.value=ans;
+        }
+    </script>
+    
+</body>
+</html>
